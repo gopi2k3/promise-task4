@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+
+<script>
+
+	
+	  
+	let ans=new Promise(function(resolve,reject){
+		
+		let  user=prompt("enter a number");
+		
+         let sum=true;
+        
+	        for(i=2;i<user;i++){
+		
+		        if(user%i==0){
+			        sum=false;
+		                break; 
+		        }
+	
+	        }
+        if(sum){
+	        resolve("Number is prime");
+        }
+        else{
+	        reject("Number is Not  prime");
+        }
+		
+		
+		
+	})
+	
+	
+	
+	ans.then((msg)=>{
+		document.write(msg)
+	})
+	.catch((msg)=>{
+		document.write(msg)
+	})
+
+
+</script>
+</body>
+</html>
